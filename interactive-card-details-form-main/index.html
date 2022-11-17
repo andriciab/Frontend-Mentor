@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Frontend Mentor | Interactive card details form</title>
+  </head>
+
+  <body>
+    <section class="purple-bg"></section>
+
+    <section class="cards-section">
+      <div class="card card-back">
+        <img class="card-img card-back-img" src="images/bg-card-back.png" />
+        <p class="cvc" id="cvc">000</p>
+      </div>
+
+      <div class="card card-front">
+        <img class="card-img card-front-img" src="images/bg-card-front.png" />
+        <img class="card-logo" src="images/card-logo.svg" />
+        <div class="card-front-info">
+          <p class="number" id="number">0000 0000 0000 0000</p>
+          <div class="name-exp-flex">
+            <p class="name" id="name">Jane Appleseed</p>
+            <div class="exp-date">
+              <p id="month">00/</p>
+              <p id="year">00</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <form id="form">
+      <label for="form-name">
+        Cardholder name
+        <input
+          id="form-name"
+          name="form-name"
+          type="text"
+          placeholder="e.g. Jane Appleseed"
+          required
+          maxlength="22"
+        />
+        <div id="name-error" class="error">Name can't contain numbers</div>
+      </label>
+
+      <label for="form-number">
+        Card number
+        <input
+          id="form-number"
+          name="form-number"
+          type="text"
+          placeholder="e.g. 1234 5678 9123 0000"
+          required
+          maxlength="16"
+        />
+        <div id="number-error" class="error">16-digit number, no spaces</div>
+      </label>
+
+      <div class="form-grid">
+        <label for="form-month">
+          Exp. Date
+          <input id="form-month" placeholder="MM" required maxlength="2" />
+          <div id="month-error" class="error">01-12</div>
+        </label>
+
+        <label for="form-year">
+          (MM/YY)
+          <input id="form-year" placeholder="YY" required maxlength="2" />
+          <div id="year-error" class="error">2 digits</div>
+        </label>
+
+        <label for="form-cvc">
+          CVC
+          <input id="form-cvc" placeholder="e.g. 123" required maxlength="3" />
+          <div id="cvc-error" class="error">3 digits</div>
+        </label>
+      </div>
+
+      <button type="submit" class="btn" id="confirm">Confirm</button>
+    </form>
+
+    <div class="thanksie hidden" id="thanksie">
+      <img src="images/icon-complete.svg" />
+      <h2>Thank you!</h2>
+      <p>We've added your card details</p>
+      <button class="btn" id="continue">Continue</button>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
