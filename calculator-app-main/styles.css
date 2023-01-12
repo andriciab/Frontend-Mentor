@@ -1,0 +1,238 @@
+@import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "League Spartan", sans-serif;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* ==== LAYOUT ==== */
+
+.container {
+  width: 90%;
+  min-width: 290px;
+  max-width: 420px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.screen {
+  width: 100%;
+  height: 100px;
+  margin: 18px 0;
+}
+
+.btns-grid {
+  display: grid;
+  grid-template-rows: repeat(5, 1fr);
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 12px;
+  padding: 16px;
+}
+
+.reset {
+  grid-area: 5 / 1 / span 1 / span 2;
+  /* Make it start on row 5 , column 1; span 1 row and 1 column*/
+}
+
+.equal {
+  grid-area: 5 / 3 / span 1 / span 2;
+}
+
+/* ==== STYLING ==== */
+
+button {
+  font-family: inherit; /* form elements don't inherit font settings */
+  font-size: 32px;
+  font-weight: 700;
+  border: none;
+  height: 56px;
+}
+
+button,
+.screen,
+.btns-grid {
+  border-radius: 8px;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+.screen {
+  position: relative;
+}
+
+.previous-operand {
+  font-size: 24px;
+  position: absolute;
+  right: 20px;
+  top: 16px;
+  opacity: 0.6;
+}
+
+.current-operand,
+.error-msg {
+  font-size: 40px;
+  position: absolute;
+  right: 20px;
+  bottom: 14px;
+}
+
+.operand {
+  color: hsl(0, 0%, 97%);
+}
+
+/* ==== THEME 1 ==== */
+
+body {
+  background-color: hsl(222, 26%, 31%);
+  transition: background-color 0.5s;
+}
+
+.screen {
+  background-color: hsl(224, 36%, 15%);
+}
+
+.btns-grid {
+  background-color: hsl(223, 31%, 20%);
+}
+
+.light-btn {
+  background-color: hsl(30, 25%, 89%);
+  box-shadow: inset 0px -4px hsl(28, 16%, 65%);
+}
+
+.light-btn:hover {
+  background-color: hsl(40, 60%, 99%);
+}
+
+.blue-btn {
+  background-color: hsl(225, 21%, 49%);
+  box-shadow: inset 0px -4px hsl(224, 28%, 35%);
+}
+
+.blue-btn:hover {
+  background-color: hsl(225, 30%, 60%);
+}
+
+.red-btn {
+  background-color: hsl(6, 63%, 50%);
+  box-shadow: inset 0px -4px hsl(6, 70%, 34%);
+}
+
+.red-btn:hover {
+  background-color: hsl(6, 69%, 59%);
+}
+
+.light-btn:active,
+.blue-btn:active,
+.red-btn:active {
+  transform: translateY(4px);
+  box-shadow: none;
+  height: 52px;
+}
+
+.light-text {
+  color: hsl(0, 0%, 97%);
+}
+
+.dark-text {
+  color: hsl(221, 14%, 31%);
+}
+
+/* ==== THEME 2 ==== */
+
+body.active {
+  background-color: hsl(0, 0%, 90%);
+}
+
+.screen.active {
+  background-color: hsl(0, 0%, 93%);
+}
+
+.title.active {
+  color: hsl(221, 14%, 31%);
+}
+
+.btns-grid.active {
+  background-color: hsl(0, 5%, 81%);
+}
+
+.indicator.active {
+  left: 27.5px;
+  background-color: hsl(25, 98%, 40%);
+}
+
+.blue-btn.active {
+  background-color: hsl(185, 42%, 37%);
+  box-shadow: inset 0px -4px hsl(185, 58%, 25%);
+}
+
+.blue-btn.active:hover {
+  background-color: hsl(185, 38%, 47%);
+}
+
+.red-btn.active {
+  background-color: hsl(25, 98%, 40%);
+  box-shadow: inset 0px -4px hsl(25, 99%, 27%);
+}
+
+.red-btn.active:hover {
+  background-color: hsl(25, 73%, 47%);
+}
+
+.theme-toggler.active {
+  background-color: hsl(0, 5%, 81%);
+}
+
+.light-btn:active,
+.blue-btn:active,
+.red-btn:active {
+  transform: translateY(4px);
+  box-shadow: none;
+  height: 52px;
+}
+
+.prev-op-text {
+  color: hsl(221, 14%, 31%);
+}
+
+.curr-op-text {
+  color: hsl(221, 14%, 31%);
+}
+
+/* ==== THEME TOGGLER ==== */
+
+.theme-toggler {
+  position: relative;
+  display: block;
+  width: 50px;
+  height: 25px;
+  border-radius: 50px;
+  background-color: hsl(223, 31%, 20%);
+  cursor: pointer;
+}
+
+.indicator {
+  position: absolute;
+  top: 2.45px;
+  left: 3px;
+  background-color: hsl(6, 63%, 50%);
+  border-radius: 22px;
+  height: 20px;
+  width: 20px;
+  transition: 0.6s;
+}
