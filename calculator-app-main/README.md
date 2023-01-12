@@ -16,8 +16,8 @@ Users should be able to:
 
 ### Screenshot
 
-![](./images/screenshot-theme1.jpg)
-![](./images/screenshot-theme2.jpg)
+![](./screenshots/screenshot-theme1.jpg)
+![](./screenshots/screenshot-theme2.jpg)
 
 ### Built with
 
