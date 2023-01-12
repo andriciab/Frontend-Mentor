@@ -4,7 +4,7 @@ This is a solution to the [Calculator app challenge on Frontend Mentor](https://
 
 ### Links
 
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Live Site URL: https://melodious-cupcake-f2b2e0.netlify.app/
 
 ### The challenge
 
